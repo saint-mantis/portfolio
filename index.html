@@ -566,7 +566,7 @@
         </div>
 
       </div>
-      <center><button class="downlaodBtn" onclick="download()"><i class='bx bxs-download'></i>  Download</button></center>
+      <center><button id="downloadbtn" class="downlaodBtn" onclick="download()"><i class='bx bxs-download'></i>  Download</button></center>
 
     </section><!-- End Resume Section -->
 
@@ -942,16 +942,11 @@
   
 <script>
 
-  function download(){
-
-const data = 'assets/resume/Arun K Babu Resume.pdf'
-const blob = new Blob([data], {type: 'application/pdf'});
-const link = document.createElement('a');
-link.href = window.URL.createObjectURL(blob);
-link.download = 'Arun K Babu Resume.pdf';
-link.click();
-
-  }
+function download(){
+pdf = "assets/resume/Arun K Babu Resume.pdf"
+window.open(pdf);
+}
+  
 </script>
 </body>
 </html>
