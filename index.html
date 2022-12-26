@@ -39,7 +39,17 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .downlaodBtn{
+      background-color: #000000;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
 
+    }
+  </style>
 </head>
 
 <body>
@@ -556,6 +566,8 @@
         </div>
 
       </div>
+      <center><button class="downlaodBtn" onclick="download()"><i class='bx bxs-download'></i>  Download</button></center>
+
     </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
@@ -928,8 +940,19 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   
+<script>
 
+  function download(){
+
+const data = 'assets/resume/Arun K Babu Resume.pdf'
+const blob = new Blob([data], {type: 'application/pdf'});
+const link = document.createElement('a');
+link.href = window.URL.createObjectURL(blob);
+link.download = 'Arun K Babu Resume.pdf';
+link.click();
+
+  }
+</script>
 </body>
-
 </html>
 
